@@ -15,7 +15,7 @@
 
 - git clone https://github.com/balattila77/crewTest.git
 - cd crewTest
-
+- docker-compose up
 
 
 
