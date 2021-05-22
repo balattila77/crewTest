@@ -9,8 +9,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 WORKDIR /app
 Copy . .
 RUN composer self-update --stable
-RUN php -d memory_limit=-1 /usr/local/bin/composer.phar update
-RUN php -d memory_limit=-1 /usr/local/bin/composer.phar install
+RUN composer update
+RUN composer install
 
 CMD chmod -R a+w storage/
 CMD chmod -R a+w bootstrap/cache/
