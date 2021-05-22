@@ -6,7 +6,7 @@ RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip
 
 RUN docker-php-ext-install pdo pdo_mysql mbstring zip
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
-       --install-dir=/usr/local/bin --filename=composer --1
+       --install-dir=/usr/local/bin --filename=composer --version=1.10.22
 
 WORKDIR /app
 Copy . .
