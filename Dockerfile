@@ -10,7 +10,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /app
 Copy . .
-RUN composer update
+#RUN composer update
 RUN composer install
 
 CMD chmod -R a+w storage/
