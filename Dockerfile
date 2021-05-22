@@ -18,7 +18,6 @@ RUN mkdir storage/framework/cache
 RUN mkdir storage/framework/session
 RUN mkdir storage/framework/views
 RUN mkdir storage/logs
-RUN mkdir vendor
 
 RUN chmod -R 777 storage/
 
