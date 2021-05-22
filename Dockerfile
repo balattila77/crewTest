@@ -2,9 +2,9 @@ FROM php:8.0-fpm
 RUN cd /usr/local/etc/php/conf.d/ && \
   echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
-RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip
+RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl
 
-RUN docker-php-ext-install pdo pdo_mysql mbstring zip
+RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
        --install-dir=/usr/local/bin --filename=composer
 
@@ -20,9 +20,8 @@ RUN mkdir storage/framework/views
 RUN mkdir storage/logs
 
 RUN chmod -R 777 storage/
-
-#RUN composer self-update 
-RUN composer update
+RUN composer self-update --2
+RUN composer update --ignore-platform-reqs
 #RUN composer install
 
 
