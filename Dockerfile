@@ -1,5 +1,6 @@
 FROM php:8.0-fpm
-ENV PHP_MEMORY_LIMIT=-1
+RUN cd /usr/local/etc/php/conf.d/ && \
+  echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
 RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip
 
