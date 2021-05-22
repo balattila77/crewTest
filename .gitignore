@@ -3,7 +3,6 @@
 /public/storage
 /storage/*.key
 /vendor/*
-!/vendor/autoload.php
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
