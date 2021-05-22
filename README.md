@@ -1,4 +1,4 @@
-<p align="center"><img src="https://images.crewcall.hu/x50/o/storage/settings/April2020/Itiu5vWMSZG1xeHJ22EO.png" ><br />**crewcall tesztfeladat**</p>
+<p align="center"><img src="https://images.crewcall.hu/x50/o/storage/settings/April2020/Itiu5vWMSZG1xeHJ22EO.png" ><br /> **crewcall tesztfeladat** </p>
 
 
 ## Fejlesztő környezet
@@ -19,8 +19,5 @@
 
 
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-- **[OP.GG](https://op.gg)**
 
