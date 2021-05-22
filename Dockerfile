@@ -10,7 +10,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /app
 Copy . .
-RUN composer self-update --rollback
 RUN composer update
 RUN composer install
 
