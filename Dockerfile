@@ -1,6 +1,6 @@
 FROM php:8.0-fpm
 
-RUN apt-get update -y && apt-get install -y libonig-dev zip unzip
+RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip
 
 RUN docker-php-ext-install pdo pdo_mysql mbstring zip
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
