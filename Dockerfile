@@ -22,8 +22,8 @@ RUN mkdir storage/logs
 RUN chmod -R 777 storage/
 
 #RUN composer self-update 
-#RUN composer update
-RUN composer install
+RUN composer update
+#RUN composer install
 
 
 RUN chmod -R a+w bootstrap/cache/
