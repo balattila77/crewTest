@@ -10,11 +10,18 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /app
 Copy . .
+CMD mkdir storage/app/public
+CMD mkdir storage/framework/cache
+CMD mkdir storage/logs
+CMD mkdir storage/framework/session
+CMD mkdir storage/framework/views
+CMD chmod -R 777 storage/
+
 RUN composer self-update 1.10.22
 #RUN composer update
 RUN composer install
 
-CMD chmod -R a+w storage/
+
 CMD chmod -R a+w bootstrap/cache/
 CMD php artisan key:generate
 CMD php artisan serve --host=0.0.0.0
