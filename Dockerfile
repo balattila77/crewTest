@@ -10,11 +10,15 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /app
 Copy . .
-CMD mkdir storage/app/public
-CMD mkdir storage/framework/cache
-CMD mkdir storage/logs
-CMD mkdir storage/framework/session
-CMD mkdir storage/framework/views
+mkdir storage
+mkdir storage/app
+mkdir storage/app/public
+mkdir storage/framework
+mkdir storage/framework/cache
+mkdir storage/framework/session
+mkdir storage/framework/views
+mkdir storage/logs
+
 CMD chmod -R 777 storage/
 
 RUN composer self-update 1.10.22
