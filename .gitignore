@@ -2,9 +2,7 @@
 /public/hot
 /public/storage
 /storage/*.key
-/vendor/*
-!/vendor/composer
-!/vendor/autoload.php
+/vendor
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
