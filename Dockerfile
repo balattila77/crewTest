@@ -2,6 +2,12 @@ FROM php:8.0-fpm
 RUN cd /usr/local/etc/php/conf.d/ && \
   echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
+
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic main multiverse restricted universe"
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-security main multiverse restricted universe"
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-updates main multiverse restricted universe"
+
+
 RUN apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl
 
