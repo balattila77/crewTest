@@ -35,7 +35,7 @@ RUN mkdir -m 777 storage && mkdir -m 777 storage/app && mkdir -m 777 storage/app
 
 RUN composer install
 
-RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod 775 /var/www/
+RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod -R 777 /var/www/
 #RUN chmod -R a+w bootstrap/cache/
 #RUN chmod 775 /var/www/
 CMD php artisan key:generate
