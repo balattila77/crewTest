@@ -32,7 +32,7 @@ RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
        --install-dir=/usr/local/bin --filename=composer
 
-WORKDIR /app
+WORKDIR /var/www
 Copy . .
 RUN mkdir -v -m 777 storage
 RUN mkdir -v -m 777 storage/app
