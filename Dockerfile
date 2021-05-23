@@ -10,16 +10,15 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /app
 Copy . .
-RUN mkdir storage
-RUN mkdir storage/app
-RUN mkdir storage/app/public
-RUN mkdir storage/framework
-RUN mkdir storage/framework/cache
-RUN mkdir storage/framework/session
-RUN mkdir storage/framework/views
-RUN mkdir storage/logs
+RUN mkdir ("storage", 0777);
+RUN mkdir ("storage/app", 0777);
+RUN mkdir ("storage/app/public", 0777);
+RUN mkdir ("storage/framework", 0777);
+RUN mkdir ("storage/framework/cache", 0777);
+RUN mkdir ("storage/framework/session", 0777);
+RUN mkdir ("storage/framework/views", 0777);
+RUN mkdir ("storage/logs", 0777);
 
-RUN chmod -R 777 storage/
 RUN composer self-update --2
 #RUN composer update
 
