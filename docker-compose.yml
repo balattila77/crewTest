@@ -7,8 +7,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      
-      - ./php/ini:/usr/local/etc/php
+      - .:/var/www
     depends_on:
       - db
 
