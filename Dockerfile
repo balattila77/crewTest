@@ -17,8 +17,8 @@ RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip cur
 
 RUN apt-get purge php7.* -y
 RUN apt update -y && apt upgrade -y
-RUN apt-get install php7.2-mbstring
-#RUN apt install php-mbstring php-xml -y
+#RUN apt-get install php7.2-mbstring
+RUN apt install php7.2-mbstring php7.2-mbstring -y
 
 
 RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
