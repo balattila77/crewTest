@@ -19,7 +19,8 @@ RUN apt update
 
 
 #RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl php7.3-mbstring php7.3-xml
+RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl 
+RUN apt install -y php7.3-mbstring php7.3-xml
 
 #RUN apt-get purge php7.* -y
 #RUN apt update -y && apt upgrade -y
