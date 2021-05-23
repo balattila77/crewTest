@@ -19,7 +19,7 @@ RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
        --install-dir=/usr/local/bin --filename=composer
 
-WORKDIR /var/www
+WORKDIR /app
 Copy . .
 RUN mkdir -m 777 storage && mkdir -m 777 storage/app && mkdir -m 777 storage/app/public && mkdir -m 777 storage/framework && mkdir -m 777 storage/framework/cache && mkdir -m 777 storage/framework/session && mkdir -m 777 storage/framework/views && mkdir -m 777 storage/logs
 #RUN mkdir -m 777 storage/app
@@ -35,7 +35,7 @@ RUN mkdir -m 777 storage && mkdir -m 777 storage/app && mkdir -m 777 storage/app
 
 RUN composer install
 
-RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod -R 777 /var/www/
+RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod -R 775 /app
 #RUN chmod -R a+w bootstrap/cache/
 #RUN chmod 775 /var/www/
 CMD php artisan key:generate
