@@ -17,9 +17,9 @@ RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip cur
 
 RUN apt-get purge php7.* -y
 
+RUN add-apt-repository ppa:ondrej/php -y
 RUN apt update -y && apt upgrade -y
 
-#RUN add-apt-repository ppa:ondrej/php -y
 RUN apt install php-mbstring php-xml -y
 
 
