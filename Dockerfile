@@ -2,7 +2,7 @@ FROM php:7.4-fpm
 RUN cd /usr/local/etc/php/conf.d/ && \
   echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
-RUN apt-get update -y && apt-get upgrade && apt update -y
+RUN apt-get update -y && apt-get upgrade -y && apt update -y
 
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y gnupg2 software-properties-common libonig-dev libzip-dev zip unzip curl  libcurl4-openssl-dev
 #RUN apt-get install software-properties-common -y
