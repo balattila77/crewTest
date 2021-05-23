@@ -9,8 +9,8 @@ RUN apt-get purge php7.* -y
 RUN apt-get install software-properties-common -y
 RUN apt update -y
 
-RUN add-apt-repository ppa:ondrej/php -y
-RUN apt update -y
+#RUN add-apt-repository ppa:ondrej/php -y
+#RUN apt update -y
 RUN apt upgrade -y
 RUN apt install php-mbstring php-xml -y
 
