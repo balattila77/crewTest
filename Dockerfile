@@ -20,7 +20,7 @@ RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-updates main
 
 #RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl 
-RUN apt install -y php-mbstring php-xml
+#RUN apt install -y php-mbstring php-xml
 
 #RUN apt-get purge php7.* -y
 #RUN apt update -y && apt upgrade -y
