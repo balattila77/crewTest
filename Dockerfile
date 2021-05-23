@@ -4,7 +4,7 @@ RUN cd /usr/local/etc/php/conf.d/ && \
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt update
-RUN apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
+#RUN apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring  php-xml php-pear php-bcmath
 
 
 
@@ -19,7 +19,7 @@ RUN apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd
 
 
 #RUN apt-get update -y && apt-get upgrade -y
-#RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl
+RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl mbstring xml
 
 #RUN apt-get purge php7.* -y
 #RUN apt update -y && apt upgrade -y
