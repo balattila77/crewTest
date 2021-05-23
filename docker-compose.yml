@@ -6,8 +6,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8000:8000
-    volumes:
-     
+    
     depends_on:
       - db
 
