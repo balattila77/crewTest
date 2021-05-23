@@ -21,21 +21,21 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /var/www
 Copy . .
-#RUN mkdir -v -m 777 storage
-#RUN mkdir -v -m 777 storage/app
-#RUN mkdir -v -m 777 storage/app/public
-#RUN mkdir -v -m 777 storage/framework
-#RUN mkdir -v -m 777 storage/framework/cache
-#RUN mkdir -v -m 777 storage/framework/session
-#RUN mkdir -v -m 777 storage/framework/views
-#RUN mkdir -v -m 777 storage/logs
+RUN mkdir -m 777 storage && mkdir -m 777 storage/app && mkdir -m 777 storage/app/public && mkdir -m 777 storage/framework && mkdir -m 777 storage/framework/cache && mkdir -m 777 storage/framework/session && mkdir -m 777 storage/framework/views && mkdir -m 777 storage/logs
+#RUN mkdir -m 777 storage/app
+#RUN mkdir -m 777 storage/app/public
+#RUN mkdir -m 777 storage/framework
+#RUN mkdir -m 777 storage/framework/cache
+#RUN mkdir -m 777 storage/framework/session
+#RUN mkdir -m 777 storage/framework/views
+#RUN mkdir -m 777 storage/logs
 
 #RUN composer self-update --2
 #RUN composer update
 
 RUN composer install
 
-#RUN chmod -R a+w storage/
+RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod 775 /var/www/
 #RUN chmod -R a+w bootstrap/cache/
 #RUN chmod 775 /var/www/
 CMD php artisan key:generate
