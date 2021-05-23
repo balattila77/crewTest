@@ -4,9 +4,6 @@ RUN cd /usr/local/etc/php/conf.d/ && \
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt update
-#RUN apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring  php-xml php-pear php-bcmath
-
-
 
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y gnupg2
 RUN apt-get install software-properties-common -y
@@ -17,16 +14,7 @@ RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic main multive
 RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-security main multiverse restricted universe"
 RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-updates main multiverse restricted universe"
 
-
-#RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl  libcurl4-openssl-dev
-#RUN apt install -y php-mbstring php-xml
-
-#RUN apt-get purge php7.* -y
-#RUN apt update -y && apt upgrade -y
-#RUN apt-get install php7.2-mbstring
-#RUN apt install php7.2-mbstring php7.2-xml -y
-
 
 RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
