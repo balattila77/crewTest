@@ -3,8 +3,17 @@ RUN cd /usr/local/etc/php/conf.d/ && \
   echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
 RUN apt-get upgrade -y
-RUN apt-get install php7.2-mbstring php7.2-xml -y
-RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl php7.4-xml php7.4-mbstring
+RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl
+
+RUN apt-get purge php7.* -y
+RUN add-apt-repository ppa:ondrej/php -y
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt install php-mbstring php-xml -y
+
+
+
+
 
 RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
