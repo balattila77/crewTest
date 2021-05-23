@@ -2,7 +2,7 @@ FROM php:8.0-fpm
 RUN cd /usr/local/etc/php/conf.d/ && \
   echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
-RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y gnupg2
 RUN apt-get install software-properties-common -y
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
