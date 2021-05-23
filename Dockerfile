@@ -13,14 +13,14 @@ RUN apt update
 #RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
 #RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 
-#RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic main multiverse restricted universe"
-#RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-security main multiverse restricted universe"
-#RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-updates main multiverse restricted universe"
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic main multiverse restricted universe"
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-security main multiverse restricted universe"
+RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-updates main multiverse restricted universe"
 
 
 #RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl 
-RUN apt install -y php7.3-mbstring php7.3-xml
+RUN apt install -y php-mbstring php-xml
 
 #RUN apt-get purge php7.* -y
 #RUN apt update -y && apt upgrade -y
