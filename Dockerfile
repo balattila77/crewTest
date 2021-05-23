@@ -48,7 +48,7 @@ RUN composer self-update --2
 
 RUN composer install
 
-
+RUN chmod -R a+w storage/
 RUN chmod -R a+w bootstrap/cache/
 CMD php artisan key:generate
 CMD php artisan serve --host=0.0.0.0
