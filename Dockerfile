@@ -1,8 +1,7 @@
-FROM php:8.0-fpm
+FROM php:7.4-fpm
 RUN cd /usr/local/etc/php/conf.d/ && \
   echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
 
-RUN php -v
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt update
 #RUN apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring  php-xml php-pear php-bcmath
