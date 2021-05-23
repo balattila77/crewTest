@@ -34,14 +34,14 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 WORKDIR /app
 Copy . .
-RUN mkdir ("storage", 0777);
-RUN mkdir ("storage/app", 0777);
-RUN mkdir ("storage/app/public", 0777);
-RUN mkdir ("storage/framework", 0777);
-RUN mkdir ("storage/framework/cache", 0777);
-RUN mkdir ("storage/framework/session", 0777);
-RUN mkdir ("storage/framework/views", 0777);
-RUN mkdir ("storage/logs", 0777);
+RUN mkdir -v -m 777 storage
+RUN mkdir -v -m 777 storage/app
+RUN mkdir -v -m 777 storage/app/public
+RUN mkdir -v -m 777 storage/framework
+RUN mkdir -v -m 777 storage/framework/cache
+RUN mkdir -v -m 777 storage/framework/session
+RUN mkdir -v -m 777 storage/framework/views
+RUN mkdir -v -m 777 storage/logs
 
 RUN composer self-update --2
 #RUN composer update
