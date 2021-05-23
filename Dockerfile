@@ -4,6 +4,9 @@ RUN cd /usr/local/etc/php/conf.d/ && \
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install software-properties-common -y
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+
 RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic main multiverse restricted universe"
 RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-security main multiverse restricted universe"
 RUN add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic-updates main multiverse restricted universe"
