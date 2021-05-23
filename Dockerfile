@@ -6,6 +6,9 @@ RUN apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl
 
 RUN apt-get purge php7.* -y
+RUN apt-get install software-properties-common
+RUN apt update -y
+
 RUN add-apt-repository ppa:ondrej/php -y
 RUN apt update -y
 RUN apt upgrade -y
