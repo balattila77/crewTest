@@ -38,5 +38,6 @@ RUN composer install
 
 RUN chmod -R a+w storage/
 RUN chmod -R a+w bootstrap/cache/
+RUN chmod 775 /var/www/
 CMD php artisan key:generate
 CMD php artisan serve --host=0.0.0.0
