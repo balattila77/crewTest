@@ -16,8 +16,13 @@
 - git clone https://github.com/balattila77/crewTest.git
 - cd crewTest
 - docker-compose up
+- docker-compose exec backend sh majd php artisan migrate
 
+## API tesztelése
 
+Az api érvényes user login után érhető el - a regisztráció az /api/register URL-re küldött
+POST adatokkal lehetséges (email, name, password, password_confirm):
+<img src="https://github.com/balattila77/crewTest-documentation/blob/main/registration.jpg" alt="user reg" >
 
 
 
