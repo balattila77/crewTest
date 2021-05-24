@@ -15,7 +15,7 @@ RUN cd /usr/local/etc/php/conf.d/ && \
 
 #RUN apt-get update -y && apt-get install -y libonig-dev libzip-dev zip unzip curl  libcurl4-openssl-dev
 #RUN docker-php-ext-install pdo pdo_mysql mbstring zip curl
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql zip unzip
 RUN curl -sS https://getcomposer.org/installer | php -- \ 
        --install-dir=/usr/local/bin --filename=composer
 
