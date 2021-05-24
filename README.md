@@ -32,7 +32,16 @@ POST api/stock:
 <br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/oneitem.jpg" alt="post one item" ><br /><br />
 Csoportos feltöltés egy jsonFile POST értéket vár (api/storebulk), ez a teszthez a 
 https://raw.githubusercontent.com/balattila77/sampleData/main/items.json
-<br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/oneitem.jpg" alt="post bulk item" ><br /><br />
+<br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/storebulk.jpg" alt="post bulk item" ><br /><br />
+Statisztika: <br />
+GET http://localhost:8000/api/stock<br /><br />
+Eseménynapló:<br />
+GET http://localhost:8000/api/event<br />
+... vagy adott event típusra szűrve:<br />
+GET http://localhost:8000/api/event?queued<br />
+Adot esemény ID-ra kérés:<br />
+GET http://localhost:8000/api/event/1<br />
+
 
 
 
