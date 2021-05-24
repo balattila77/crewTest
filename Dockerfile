@@ -35,7 +35,7 @@ Copy . .
 #RUN composer self-update --2
 #RUN composer update
 
-RUN composer install
+#RUN composer install
 RUN composer update
 
 #RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod -R 775 /app
