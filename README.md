@@ -31,7 +31,7 @@ Egy termék rögzítése<br />
 POST api/stock:
 <br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/oneitem.jpg" alt="post one item" ><br /><br />
 Csoportos feltöltés egy jsonFile POST értéket vár (api/storebulk), ez a teszthez a 
-https://raw.githubusercontent.com/balattila77/sampleData/main/items.json
+https://raw.githubusercontent.com/stockholmux/ecommerce-sample-set/master/items.json
 <br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/storebulk.jpg" alt="post bulk item" ><br /><br />
 Statisztika: <br />
 GET http://localhost:8000/api/stock<br /><br />
