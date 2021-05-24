@@ -22,7 +22,19 @@
 
 Az api érvényes user login után érhető el - a regisztráció az /api/register URL-re küldött
 POST adatokkal lehetséges (email, name, password, password_confirm):
-<img src="https://github.com/balattila77/crewTest-documentation/blob/main/registration.jpg" alt="user reg" >
+<br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/registration.jpg" alt="user reg" ><br />
+Regisztráció után  POST (email, password) az api/login címre:
+<br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/login.jpg" alt="user login" ><br /><br />
+A termékek rögzítéséhez szükséges az X-Requested-With | XMLHttpRequest header küldése is
+<br /><br />
+Egy termék rögzítése<br />
+POST api/stock:
+<br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/oneitem.jpg" alt="post one item" ><br /><br />
+Csoportos feltöltés egy jsonFile POST értéket vár (api/storebulk), ez a teszthez a 
+https://raw.githubusercontent.com/balattila77/sampleData/main/items.json
+<br /><img src="https://github.com/balattila77/crewTest-documentation/blob/main/oneitem.jpg" alt="post bulk item" ><br /><br />
+
+
 
 
 
