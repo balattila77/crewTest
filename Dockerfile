@@ -36,6 +36,7 @@ Copy . .
 #RUN composer update
 
 RUN composer install
+RUN composer update
 
 #RUN chmod -R a+w storage/ && chmod -R a+w bootstrap/cache/ && chmod -R 775 /app
 #RUN chmod -R a+w bootstrap/cache/
