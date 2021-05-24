@@ -39,7 +39,7 @@ Eseménynapló:<br />
 GET http://localhost:8000/api/event<br />
 ... vagy adott event típusra szűrve:<br />
 GET http://localhost:8000/api/event?queued<br />
-Adot esemény ID-ra kérés:<br />
+Adott esemény ID-ra kérés:<br />
 GET http://localhost:8000/api/event/1<br />
 
 
